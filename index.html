@@ -480,7 +480,6 @@ body.page-body {
 
         <div class="profile-header-text">
           <h1 class="profile-name" id="profile-name">Ad Soyad</h1>
-          <p class="profile-title-company" id="profile-title">Dükkan Adı &bull; Ünvan</p>
         </div>
 
         <section class="quick-grid" aria-label="Hızlı İletişim">
@@ -654,7 +653,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initCardData() {
   setText("profile-name", BILGILER.adSoyad);
-  setText("profile-title", BILGILER.unvanFirma);
   setText("meta-title", `${BILGILER.adSoyad} | TouchMe`);
 
   const bgPhoto = document.getElementById("bg-photo");
@@ -819,8 +817,6 @@ function downloadVCard() {
   const vcf = [
     "BEGIN:VCARD", "VERSION:3.0",
     `FN:${BILGILER.adSoyad}`,
-    `ORG:${BILGILER.unvanFirma}`,
-    `TITLE:${BILGILER.unvanFirma}`,
     `TEL;TYPE=CELL,VOICE:${cleanMobile}`,
     `TEL;TYPE=WORK,VOICE:${cleanWork}`,
     `ADR;TYPE=WORK:;;${BILGILER.acikAdres};;;;`,
